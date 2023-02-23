@@ -1,25 +1,23 @@
-// NUMBER TYPE
-let age = 24
-let weight :number= 170
+let height = 160;
 
-weight = 180
-weight = 160
-weight = "160"
+height = "200";
 
-age = 25
-age = 23
-age = "25"
+let height2: number = 120;
 
-// TYPE STRING
-let myName = "Muhammad Brian"
-let catName:string = "Catty"
+height2 = "200";
 
-myName =true;
-myName = "Muhammad Brian".length
-myName = "Muhammad Brian".length === 0
+let amount;
 
-// TYPE BOOLEAN
-let isAwesome = false
-let isAwesome2 = "Muhammad Brian".length === 0
-let isBoring:boolean = true
+amount = 120;
+amount = "Laith";
+amount = true;
+amount = [];
+amount = {};
 
+let amount2: number | string;
+
+amount2 = 120;
+amount2 = "Laith";
+amount2 = true;
+amount2 = [];
+amount2 = {};
