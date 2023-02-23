@@ -1,44 +1,56 @@
-const obj: {
-  firstName: string;
-  lastName: string;
+class Car {
+  model: string;
+  color: string;
   age: number;
-  gender: string;
-} = {
-  firstName: "Muhammad",
-  lastName: "Brian",
-  age: 27,
-  gender: "male",
-};
+  private peopleInPolicy: string[] = [];
+  readonly manufactureDate: string = "2019-01-05";
 
-interface Person {
-  firstName: string;
-  lastName: string;
-  age: number;
-  gender: string;
+  constructor(model, color, age) {
+    this.model = model;
+    this.color = color;
+    this.age = age;
+  }
+
+  describe() {
+    console.log(`A ${this.age} year old ${this.color} ${this.model}`);
+  }
+
+  addToPolicy(name: string) {
+    this.peopleInPolicy.push(name);
+  }
+
+  getPolicy() {
+    console.log(this.peopleInPolicy);
+    // myJaguar.manufactureDate = "2019-07-05"; cannot because readonly
+  }
 }
 
-const obj2: Person = {
-  firstName: "Muhammad",
-  lastName: "Brian",
-  age: 27,
-  gender: "male",
-};
+const myJaguar = new Car("Jaguar", "Red", 4);
+myJaguar.addToPolicy("Muhammad Brian");
+// myJaguar.peopleInPolicy.push("ivan"); cannot because private
+// myJaguar.manufactureDate = "2019-07-05"; cannot because readonly
+myJaguar.manufactureDate;
 
-// interface always return an object
-// type just only specify and can be oneliner or other type result
+myJaguar.getPolicy();
 
-type PersonType = {
-  firstName: string;
-  lastName: string;
-  age: number;
-  gender: string;
-}[];
+//////////////////////////////////////////////
 
-const obj3: PersonType = [
-  {
-    firstName: "Muhammad",
-    lastName: "Brian",
-    age: 27,
-    gender: "male",
-  },
-];
+class Vehicle {
+  private peopleInPolicy: string[] = [];
+  readonly manufactureDate: string = "2019-01-05";
+
+  constructor(public model: string, public color: string, public age: number) {}
+
+  describe() {
+    console.log(`A ${this.age} year old ${this.color} ${this.model}`);
+  }
+
+  addToPolicy(name: string) {
+    this.peopleInPolicy.push(name);
+  }
+
+  getPolicy() {
+    console.log(this.peopleInPolicy);
+    // myJaguar.manufactureDate = "2019-07-05"; cannot because readonly
+  }
+}
