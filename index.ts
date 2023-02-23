@@ -1,23 +1,38 @@
-let height = 160;
+const obj = {
+  firstName: "Muhammad",
+  lastName: "Brian",
+  phone: "123-456-759",
+  age: 24,
+  gender: false,
+};
 
-height = "200";
+const obj2: {
+  firstName: string;
+  lastName: string;
+  phone: string;
+  age: number;
+  gender: boolean;
+} = {
+  firstName: "Muhammad",
+  lastName: "Brian",
+  phone: "123-456-759",
+  age: 24,
+  gender: false,
+};
 
-let height2: number = 120;
+obj2.age = 34;
+obj2.age = true;
 
-height2 = "200";
+obj2.name;
 
-let amount;
+obj2.phone.length;
 
-amount = 120;
-amount = "Laith";
-amount = true;
-amount = [];
-amount = {};
+obj2.age.length;
 
-let amount2: number | string;
-
-amount2 = 120;
-amount2 = "Laith";
-amount2 = true;
-amount2 = [];
-amount2 = {};
+const obj2: StudentType = {
+  firstName: "Muhammad",
+  lastName: "Brian",
+  phone: "123-456-759",
+  age: 24,
+  gender: false,
+};
