@@ -1,42 +1,27 @@
-const arrayOfString = ["string1", "string2", "string3"];
+const add = (num1, num2) => {
+  return num1 + num2;
+};
 
-arrayOfString.push("string4");
+add(4, 5);
 
-const arrayOfStringAndBoolean: (string | boolean)[] = [
-  "string1",
-  "string2",
-  "string3",
-];
+const substract = (num1: number, num2: number) => {
+  return num1 - num2;
+};
 
-arrayOfStringAndBoolean.push("string4");
-arrayOfStringAndBoolean.push(true);
+substract(4, 5);
+// substract(4, 5).length;
 
-const arrayOfBooleans: boolean[] = [true, false, true];
-arrayOfBooleans.push(1 === 0);
-arrayOfBooleans.push(true);
+const compare = (num1: number, num2: number): boolean => {
+  //Logic
+  //Logic
+  //Logic
+  //Logic
+  //Logic
+  //Logic
+  //Logic
+  return num1 == num2;
+};
 
-const arrayOfNumbers = [1, 2, 3, 4, 5];
-
-const array: string[] = [];
-
-array.push(true);
-array.push("");
-array.push(5);
-
-let arrayOfObjects: {
-  name: string;
-  age: number;
-  gender: boolean;
-}[] = [];
-
-arrayOfObjects.push({
-  name: "",
-  age: 1,
-  gender: true,
-});
-
-const arrayOfArrays = [
-  ["", "", ""],
-  ["", ""],
-];
-const arrayOfArraysOfArrays: string[][][] = [[[""]]];
+const log = (): void => {
+  console.log("hello");
+};
