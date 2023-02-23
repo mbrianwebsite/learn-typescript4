@@ -1,27 +1,43 @@
-const add = (num1, num2) => {
-  return num1 + num2;
-};
+let numberOrString = "Muhammad Brian";
 
-add(4, 5);
+numberOrString = "Lebron James";
 
-const substract = (num1: number, num2: number) => {
-  return num1 - num2;
-};
+numberOrString = 24;
 
-substract(4, 5);
-// substract(4, 5).length;
+//UNION TYPE
+let numberOrString2: string | number | undefined | null = "Muhammad Brian";
 
-const compare = (num1: number, num2: number): boolean => {
-  //Logic
-  //Logic
-  //Logic
-  //Logic
-  //Logic
-  //Logic
-  //Logic
-  return num1 == num2;
-};
+numberOrString2 = "Lebron James";
+numberOrString2 = 4;
+numberOrString2 = true;
 
-const log = (): void => {
-  console.log("hello");
+let array: ({} | null | undefined)[] = ["", 5, null, undefined, {}];
+
+/////////////////////////
+
+let rainbowColor: "red" | "orange" | 77 = "red";
+rainbowColor = "orange";
+rainbowColor = "pink";
+rainbowColor = 77;
+
+/////////////////////////
+
+enum RainbowTypes {
+  RED,
+  ORANGE,
+  YELLOW,
+  BLUE,
+  INDIGO,
+  VIOLET,
+}
+
+let rainbowColor2: RainbowTypes = RainbowTypes.BLUE;
+
+//////////////////////////
+
+let obj: {
+  property: string;
+  property2?: string;
+} = {
+  property: "",
 };
