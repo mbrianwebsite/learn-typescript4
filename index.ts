@@ -1,43 +1,44 @@
-let numberOrString = "Muhammad Brian";
+const obj: {
+  firstName: string;
+  lastName: string;
+  age: number;
+  gender: string;
+} = {
+  firstName: "Muhammad",
+  lastName: "Brian",
+  age: 27,
+  gender: "male",
+};
 
-numberOrString = "Lebron James";
-
-numberOrString = 24;
-
-//UNION TYPE
-let numberOrString2: string | number | undefined | null = "Muhammad Brian";
-
-numberOrString2 = "Lebron James";
-numberOrString2 = 4;
-numberOrString2 = true;
-
-let array: ({} | null | undefined)[] = ["", 5, null, undefined, {}];
-
-/////////////////////////
-
-let rainbowColor: "red" | "orange" | 77 = "red";
-rainbowColor = "orange";
-rainbowColor = "pink";
-rainbowColor = 77;
-
-/////////////////////////
-
-enum RainbowTypes {
-  RED,
-  ORANGE,
-  YELLOW,
-  BLUE,
-  INDIGO,
-  VIOLET,
+interface Person {
+  firstName: string;
+  lastName: string;
+  age: number;
+  gender: string;
 }
 
-let rainbowColor2: RainbowTypes = RainbowTypes.BLUE;
-
-//////////////////////////
-
-let obj: {
-  property: string;
-  property2?: string;
-} = {
-  property: "",
+const obj2: Person = {
+  firstName: "Muhammad",
+  lastName: "Brian",
+  age: 27,
+  gender: "male",
 };
+
+// interface always return an object
+// type just only specify and can be oneliner or other type result
+
+type PersonType = {
+  firstName: string;
+  lastName: string;
+  age: number;
+  gender: string;
+}[];
+
+const obj3: PersonType = [
+  {
+    firstName: "Muhammad",
+    lastName: "Brian",
+    age: 27,
+    gender: "male",
+  },
+];
