@@ -1,38 +1,42 @@
-const obj = {
-  firstName: "Muhammad",
-  lastName: "Brian",
-  phone: "123-456-759",
-  age: 24,
-  gender: false,
-};
+const arrayOfString = ["string1", "string2", "string3"];
 
-const obj2: {
-  firstName: string;
-  lastName: string;
-  phone: string;
+arrayOfString.push("string4");
+
+const arrayOfStringAndBoolean: (string | boolean)[] = [
+  "string1",
+  "string2",
+  "string3",
+];
+
+arrayOfStringAndBoolean.push("string4");
+arrayOfStringAndBoolean.push(true);
+
+const arrayOfBooleans: boolean[] = [true, false, true];
+arrayOfBooleans.push(1 === 0);
+arrayOfBooleans.push(true);
+
+const arrayOfNumbers = [1, 2, 3, 4, 5];
+
+const array: string[] = [];
+
+array.push(true);
+array.push("");
+array.push(5);
+
+let arrayOfObjects: {
+  name: string;
   age: number;
   gender: boolean;
-} = {
-  firstName: "Muhammad",
-  lastName: "Brian",
-  phone: "123-456-759",
-  age: 24,
-  gender: false,
-};
+}[] = [];
 
-obj2.age = 34;
-obj2.age = true;
+arrayOfObjects.push({
+  name: "",
+  age: 1,
+  gender: true,
+});
 
-obj2.name;
-
-obj2.phone.length;
-
-obj2.age.length;
-
-const obj2: StudentType = {
-  firstName: "Muhammad",
-  lastName: "Brian",
-  phone: "123-456-759",
-  age: 24,
-  gender: false,
-};
+const arrayOfArrays = [
+  ["", "", ""],
+  ["", ""],
+];
+const arrayOfArraysOfArrays: string[][][] = [[[""]]];
